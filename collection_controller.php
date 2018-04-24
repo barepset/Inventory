@@ -1,5 +1,5 @@
 ﻿<?php
-include "connection.php";
+include "config/connection.php";
 include "collection/collection.php";
 function myErrorHandler($errno, $errstr, $errfile, $errline) {
 if(!!$errstr){
