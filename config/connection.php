@@ -1,14 +1,13 @@
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-// echo "Connected successfully";
+<?
+class connection {
+	var $host = "localhost";
+	var $username = "root";
+	var $password = "";
+	var $db_name = "test";
+	
+	function get_db() {
+		return $db = new PDO("mysql:dbname=".$this->db_name
+		.";host=".$this->host.";", $this->username, $this->password);
+	}
+}
 ?>
